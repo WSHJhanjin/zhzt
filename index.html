@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>精准就业服务平台 · 安防2501 学生能力画像与岗位推荐</title>
+<link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+<!-- SECTION: topbar -->
+<div class="topbar">
+  <span class="brand">精准就业服务平台</span>
+  <span class="where" id="whereAm">总入口</span>
+  <button class="home-btn" id="btnHome" style="display:none">← 返回总入口</button>
+</div>
+
+<!-- SECTION: portal -->
+<div id="viewPortal">
+  <div class="portal-hero">
+    <h1>精准就业服务平台</h1>
+    <div class="sub"><span id="portalSub"></span></div>
+    <div class="ptags"><span>48 名学生画像</span><span>ICT 岗位能力图谱</span><span>技能提升规划</span><span>面试能力提升</span><span>深度融合职前通平台</span></div>
+  </div>
+  <div style="max-width:1240px;margin:-30px auto 20px;padding:0 16px">
+    <div class="zqt-box" style="background:#fff;margin:0">
+      <div class="zh"><span class="badge-zqt">深度合作</span>职前通平台 · ICT 领域学习与就业平台<span class="why">深圳市讯方技术股份有限公司（华为服务伙伴 · 上市公司）</span></div>
+      <div style="font-size:12px;color:#4a5468;line-height:1.8">
+        本平台与职前通（zhiqiantong.cn）深度融合对接：<b>技能提升规划</b>直达职前通课程章节、<b>推荐岗位</b>跳转职前通同类在招职位、<b>岗位库</b>提供职前通平台入口、<b>面试训练</b>对接职前通 AI 面试与题库训练功能。
+        职前通平台拥有 <b>3万+ 入驻企业 · 10万+ ICT 热门岗位 · 490+ 门课程 · 合作院校 320 余家</b>，覆盖华为数通、云计算、安全、AI、鸿蒙等全技术方向。
+      </div>
+      <div style="margin-top:9px">
+        <a class="zlink" href="https://www.zhiqiantong.cn/" target="_blank" rel="noopener">职前通平台首页</a>
+        <a class="zlink" href="https://www.zhiqiantong.cn/front/job/search" target="_blank" rel="noopener">平台全部职位</a>
+        <a class="zlink" href="https://www.zhiqiantong.cn/front/course/search" target="_blank" rel="noopener">平台全部课程</a>
+        <a class="zlink tool" href="https://www.zhiqiantong.cn/front/resume/writeResume" target="_blank" rel="noopener">简历优化（需登录）</a>
+        <a class="zlink tool" href="https://www.zhiqiantong.cn/front/aipurchase" target="_blank" rel="noopener">AI 面试（需登录）</a>
+      </div>
+    </div>
+  </div>
+  <div class="portal-cards">
+    <div class="pcard eval" id="goEval" tabindex="0" role="button" aria-label="进入课堂综合能力测评" data-primary-action>
+      <div class="icon">📊</div>
+      <h3>课堂综合能力测评</h3>
+      <div class="role">过程性评价 · 实时数据看板</div>
+      <p>数字安防网络项目运维与综合优化实训的课堂实时评价数据，多维度呈现过程性学习表现。</p>
+      <ul>
+        <li>课前预习 / 课堂互动 / 随堂测评 / 作业多维评价</li>
+        <li>教师导师与组间互评数据</li>
+        <li>知识点掌握度与能力等级实时分析</li>
+      </ul>
+      <span class="go">查看测评数据 →</span>
+    </div>
+    <div class="pcard teacher" id="goTeacher" tabindex="0" role="button" aria-label="进入教师端">
+      <div class="icon">🧑‍🏫</div>
+      <h3>教师端</h3>
+      <div class="role">面向指导老师 · 班级全貌视角</div>
+      <p>查看全班学生的能力画像全貌，掌握班级整体学情、岗位能力图谱与就业匹配情况。</p>
+      <ul>
+        <li>班级总览看板与等级分布</li>
+        <li>48 名学生画像卡片，支持搜索筛选</li>
+        <li>每个学生详情：雷达图 + 岗位推荐 + 提升建议</li>
+        <li>ICT 岗位能力图谱：四层结构与技能标签</li>
+        <li>全班画像汇总 CSV 导出</li>
+      </ul>
+      <span class="go">进入教师端 →</span>
+    </div>
+    <div class="pcard student" id="goStudent" tabindex="0" role="button" aria-label="进入学生端">
+      <div class="icon">🎓</div>
+      <h3>学生端</h3>
+      <div class="role">面向学生本人 · 个人成长视角</div>
+      <p>选择学号进入个人页面，看清课程知识体系、我的画像、适合我的岗位与面试准备。</p>
+      <ul>
+        <li>课程知识体系与我的逐模块成绩</li>
+        <li>我的能力画像雷达图</li>
+        <li>适合我的岗位推荐与成长轨迹</li>
+        <li>目标岗位能力图谱：岗位要求 vs 我的得分</li>
+        <li>个人技能提升规划与在线资源</li>
+        <li>面试能力提升：个性化题单 + 短板辅导</li>
+      </ul>
+      <span class="go">选择学号进入 →</span>
+    </div>
+  </div>
+  <div class="portal-tip">学生端页面仅展示本人数据；岗位推荐为能力匹配参考，就业请结合个人意愿与用人单位要求综合判断。</div>
+</div>
+
+<!-- SECTION: teacher -->
+<div id="viewTeacher" style="display:none">
+  <div class="header">
+    <h1>精准就业服务平台 · 教师端</h1>
+    <div class="sub">学生能力画像 · 岗位智能推荐 · ICT 岗位能力图谱 · 技能提升规划</div>
+    <div class="tags">
+      <span id="headerCls"></span>
+      <span>计算机网络技术课程</span>
+      <span>基于 5 项随堂实测成绩</span>
+      <span>岗位能力图谱 7 岗位 / 四层结构</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <!-- SECTION: viewnav -->
+    <div class="viewnav">
+      <button id="btnViewStu" class="active">学生画像</button>
+      <button id="btnViewJob">岗位库</button>
+      <button id="btnViewGraph">能力图谱</button>
+    </div>
+
+    <!-- SECTION: students-view -->
+    <div id="viewStudents">
+    <!-- SECTION: dashboard -->
+    <div style="height:14px"></div>
+    <div class="stat-row" id="statRow"></div>
+    <div class="dash-grid">
+      <div class="card">
+        <h3>班级能力维度均分（百分制）</h3>
+        <div id="dimAvgBox"></div>
+      </div>
+      <div class="card">
+        <h3>推荐岗位方向分布（首推岗位）</h3>
+        <div id="jobDistBox"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>能力等级分布</h3>
+      <div class="legend" id="lvLegend"></div>
+      <div style="margin-top:10px" id="lvBox"></div>
+    </div>
+
+    <!-- SECTION: controls -->
+    <div class="controls">
+      <input type="text" id="q" placeholder="搜索姓名 / 学号…" aria-label="搜索学生">
+      <select id="lv" aria-label="按等级筛选"></select>
+      <select id="jb" aria-label="按岗位筛选"></select>
+      <span class="cnt" id="cnt"></span>
+      <button class="btn-export" id="btnExport" data-primary-action>导出全班画像 CSV</button>
+    </div>
+
+    <!-- SECTION: grid -->
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" style="display:none">没有匹配的学生，换个关键词或筛选条件试试</div>
+    </div><!-- /viewStudents -->
+
+    <!-- SECTION: jobs-view -->
+    <div id="viewJobs" style="display:none">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px">
+        <button id="btnUpdateJobs" class="btn-update-jobs">🔄 从职前通更新岗位库</button>
+        <span id="updateStatus" style="font-size:12px;color:#6b7385"></span>
+      </div>
+      <div class="jobs-head" id="jobsHead"></div>
+      <div class="graph-tools" id="jobTools"></div>
+      <div class="job-grid" id="jobGrid"></div>
+    </div>
+
+    <!-- SECTION: graph-view -->
+    <div id="viewGraph" style="display:none">
+      <div class="jobs-head" id="graphHead"></div>
+      <div class="card">
+        <h3>四层图谱结构</h3>
+        <div id="graphLayers"></div>
+      </div>
+      <div class="card">
+        <h3>行业方向 × 岗位族（覆盖范围）</h3>
+        <div id="graphDirs"></div>
+        <div style="height:12px"></div>
+        <div id="graphFams"></div>
+      </div>
+      <div class="card">
+        <h3>岗位技能标签图谱（点击查看岗位详情）</h3>
+        <div class="graph-tools" id="graphTools"></div>
+        <div id="graphJobs"></div>
+      </div>
+      <div class="dash-grid">
+        <div class="card">
+          <h3>维度扩展建议（超出现有六维的岗位要求）</h3>
+          <div id="graphExt"></div>
+        </div>
+        <div class="card">
+          <h3>图谱更新机制</h3>
+          <div id="graphUpd"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION: footer -->
+    <div class="foot">
+      画像数据依据：基础网络搭建测验、VLAN划分测验、高可用部署与优化测验、STP协议测验、综合实训测验（设计题+排错题）五项真实成绩加权计算生成。<br>
+      岗位推荐为能力匹配参考，实际就业请结合学生意愿、实习经历与用人单位要求综合判断。薪资与认证信息为行业一般参考，请以当地实际情况为准。
+    </div>
+  </div>
+</div>
+
+<!-- SECTION: stu-pick -->
+<div id="viewPick" style="display:none">
+  <div class="header" style="background:linear-gradient(135deg,#065f46,#0d9f5f 55%,#34d399)">
+    <h1>精准就业服务平台 · 学生端</h1>
+    <div class="sub">选择你的学号，查看专属的课程学习反馈与就业推荐</div>
+  </div>
+  <div class="wrap pick-box">
+    <div class="pick-select-card">
+      <div class="pk-icon">🎓</div>
+      <h3 style="margin-bottom:4px;color:#22304e;font-size:17px">请选择你的学号</h3>
+      <p style="font-size:12.5px;color:#9aa3b8;margin-bottom:16px">选择后进入你的专属页面，仅展示你本人的学习数据与就业推荐</p>
+      <select id="pickSel" aria-label="下拉选择学号"></select>
+      <button class="pick-go" id="pickGo" data-primary-action>进入我的页面 →</button>
+    </div>
+    <div class="foot">进入页面后仅展示本人数据；岗位推荐为能力匹配参考，请结合个人意愿与用人单位要求综合判断。</div>
+  </div>
+</div>
+
+<!-- SECTION: stu-home -->
+<div id="viewStuHome" style="display:none">
+  <div class="wrap">
+    <div class="stu-hero" id="stuHero"></div>
+    <div class="card" id="courseCard"></div>
+    <div class="stu-grid2">
+      <div class="card" id="stuProfileCard"></div>
+      <div class="card" id="stuSwCard"></div>
+    </div>
+    <div class="card" id="stuJobsCard"></div>
+    <div class="card" id="stuGraphCard"></div>
+    <div class="card" id="stuImpCard"></div>
+    <div class="card" id="stuIvCard"></div>
+    <div class="card" id="stuAllJobsCard"></div>
+    <div class="foot">
+      数据依据：你在数字安防网络系列课程 5 项随堂测验中的真实成绩。<br>
+      岗位推荐为能力匹配参考，请结合个人意愿、实习经历与用人单位要求综合判断。面试参考要点为学习辅助材料，请以真实岗位要求为准。
+    </div>
+  </div>
+</div>
+
+<!-- SECTION: eval-view -->
+<div id="viewEval" style="display:none">
+  <div class="eval-bar">
+    <div class="eval-bar-l">
+      <span class="eval-t">课堂综合能力测评</span>
+      <span class="eval-s">数字安防网络项目运维与综合优化 · 学生实时评价数据</span>
+    </div>
+    <div class="eval-bar-r">
+      <button class="eval-newwin" id="evalNewWin" title="在新窗口打开完整页面">新窗口打开 ↗</button>
+      <button class="eval-back" id="evalBack" data-primary-action>← 返回总入口</button>
+    </div>
+  </div>
+  <iframe id="evalFrame" class="eval-frame" title="课堂综合能力测评数据页" loading="lazy"></iframe>
+  <div class="eval-foot">
+    <button class="eval-back2" id="evalBack2">← 返回总入口</button>
+  </div>
+</div>
+
+<!-- SECTION: modal -->
+<div class="mask" id="mask">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="m-head">
+      <div>
+        <div class="nm" id="mNm"></div>
+        <div class="meta" id="mMeta"></div>
+      </div>
+      <button class="m-close" id="mClose" aria-label="关闭">✕</button>
+    </div>
+    <div class="m-body" id="mBody"></div>
+  </div>
+</div>
+
+<!-- SECTION: job-modal -->
+<div class="mask" id="jobMask">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="m-head j-head">
+      <div>
+        <div class="nm" id="jNm"></div>
+        <div class="meta" id="jMeta"></div>
+        <div class="sal" id="jSal"></div>
+      </div>
+      <button class="m-close" id="jClose" aria-label="关闭">✕</button>
+    </div>
+    <div class="m-body" id="jBody"></div>
+  </div>
+</div>
+
+
+<!-- Data files -->
+<script src="assets/course.js"></script>
+<script src="assets/jobs.js"></script>
+<script src="assets/graph.js"></script>
+<script src="assets/zqt.js"></script>
+<script src="assets/interview.js"></script>
+<script src="assets/students.js"></script>
+<script src="assets/eval_embed.js"></script>
+<!-- Render modules -->
+<script src="assets/modules/core.js"></script>
+<script src="assets/modules/student-render.js"></script>
+<script src="assets/modules/jobs-render.js"></script>
+<script src="assets/modules/graph-render.js"></script>
+<script src="assets/modules/student-view.js"></script>
+<script src="assets/modules/interview-render.js"></script>
+<script src="assets/modules/init.js"></script>
+
+</body>
+</html>
